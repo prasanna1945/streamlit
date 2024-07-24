@@ -1,12 +1,21 @@
+#check whether string contains both alphabets and numbers
+
 import streamlit as st
 
 st.title("Alphanum")
 
-a = st.text_input(label="Enter the term number (n)")
+st.subheader("Check whether string contains both alphabets and numbers")
+
+a = st.text_input(label="Enter the string : ")
 
 if st.button("Submit"):
-    if a.isalnum():
-        st.write("Yes")
+    if  not a.isnumeric() or a.isalpha():
+        for i in a:
+            if ord(i.lower()) in range(97,123):
+                st.write("Yes")
+                break
+            else:
+                st.write("No")
+                break
     else:
         st.write("No")
-        

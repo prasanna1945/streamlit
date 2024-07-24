@@ -4,7 +4,7 @@ import streamlit as st
 
 st.title("Alphanum")
 
-st.subheader("Check whether string contains both alphabets and numbers")
+st.subheader("Check whether string contains both alphabets , numbers but not special characters")
 
 a = st.text_input(label="Enter the string : ")
 
